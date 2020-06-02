@@ -4,6 +4,18 @@ SSH Agent Forwarding
 --------------------
 SSH agent forwarding allows you to use your private, local SSH key remotely without worrying about leaving confidential data on the server you’re working with. It’s built into ssh, and is easy to set up and use.
 
+Table of Contents
+
+* [What Is an SSH Agent?](#what-is-an-ssh-agent?)
+* [What is SSH Agent Forwarding?](#what-is-ssh-agent-forwarding?)
+* [How to Enable SSH Agent Forwarding](#how-to-enable-ssh-agent-forwarding)
+    * [Add Keys to ssh-agent](#add-keys-to-ssh-agent)
+    * [Add Keys on macOS](#add-keys-on-macos)
+    * [Allow Forwarding in Your Client’s Config](#allow-forwarding-in-your-client’s-config)
+    * [Test SSH Forwarding](#test-ssh-forwarding)
+* [Setup SSH Forwarding for Windows Clients](#setup-ssh-forwarding-for-windows-clients)
+* [What to Do if SSH Forwarding Isn’t Working](#what-to-do-if-ssh-forwarding-isn’t-working)
+
 ## What Is an SSH Agent?
 
 Your public SSH key is like your username or identity, and you can share it with everybody. Your private SSH key is like a password, and is saved locally on your computer. But, this is like storing your passwords on a sticky note—anyone can view them if they have access to it. So, for security, SSH will ask you for a passphrase when you generate your keys (hopefully you didn’t skip that step) and it will use that passphrase to encrypt and decrypt your private key.
