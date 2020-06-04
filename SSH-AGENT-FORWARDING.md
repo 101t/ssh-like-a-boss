@@ -1,4 +1,6 @@
+<p align="center"> 
 ![SSH-Key](static/ssh-key.png)
+</p>
 
 SSH Agent Forwarding
 --------------------
@@ -6,15 +8,15 @@ SSH agent forwarding allows you to use your private, local SSH key remotely with
 
 Table of Contents
 
-* [What Is an SSH Agent?](#what-is-an-ssh-agent?)
-* [What is SSH Agent Forwarding?](#what-is-ssh-agent-forwarding?)
+* [What Is an SSH Agent?](#what-is-an-ssh-agent)
+* [What is SSH Agent Forwarding?](#what-is-ssh-agent-forwarding)
 * [How to Enable SSH Agent Forwarding](#how-to-enable-ssh-agent-forwarding)
     * [Add Keys to ssh-agent](#add-keys-to-ssh-agent)
     * [Add Keys on macOS](#add-keys-on-macos)
-    * [Allow Forwarding in Your Client’s Config](#allow-forwarding-in-your-client’s-config)
+    * [Allow Forwarding in Your Client’s Config](#allow-forwarding-in-your-clients-config)
     * [Test SSH Forwarding](#test-ssh-forwarding)
 * [Setup SSH Forwarding for Windows Clients](#setup-ssh-forwarding-for-windows-clients)
-* [What to Do if SSH Forwarding Isn’t Working](#what-to-do-if-ssh-forwarding-isn’t-working)
+* [What to Do if SSH Forwarding Isn’t Working](#what-to-do-if-ssh-forwarding-isnt-working)
 
 ## What Is an SSH Agent?
 

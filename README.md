@@ -1,14 +1,16 @@
+<p align="center"> 
 ![SSH-Key](static/ssh-key.png)
+</p>
 
 How to Lock Down Your SSH Server
 --------------------------------
 SSH, which stands for Secure Shell, isn't very secure by default, option for basic password authentication with no other limits. If you really want to lock down your server, you'll neet to do more configuration.
 
 ## Table of Contents
-* [Don't Allow Password Logins - Use SSH Keys](#don't-allow-password-logins---use-ssh-keys).
+* [Don't Allow Password Logins - Use SSH Keys](#dont-allow-password-logins---use-ssh-keys).
 * [Generate SSH Keys](#generate-ssh-keys).
 * [Disable SSH Password Login](#disable-ssh-password-login).
-* [Don't Allow Root Login](#don't-allow-root-login).
+* [Don't Allow Root Login](#dont-allow-root-login).
 * [Set Up two-factor authentication](#set-up-two-factor-authentication).
 * [General Issues](#general-issues).
 
@@ -83,7 +85,7 @@ passwd myusername
 You won't be logging in with this password because you'll still be using SSH Keys, but it is required. Ideally make this different from your root password. Then add this user to `/etc/sudoers` to give admin permissions:
 
 ```sh
-echo `myusername ALL=(ALL) NOPASSWD:ALL` >> /etc/sudoers
+echo "myusername ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ```
 Switch to that user with `su myusername`, and verify that you can switch back to the root user with sudo su (which doesn't require root's password), if you can, you have sudo access.
 
@@ -122,3 +124,5 @@ Do ssh-copy-id:
 ssh-copy-id someuser@<static-ip>
 ```
 > Note: do not forget change to `PasswordAuthentication no` and restart ssh again to prevent user/pass login.
+
+See also [SSH Agent Forwarding](SSH-AGENT-FORWARDING.md)
