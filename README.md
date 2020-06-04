@@ -1,5 +1,5 @@
 <p align="center"> 
-![SSH-Key](static/ssh-key.png)
+<img src="static/ssh-key.png" alt="SSH-Key" >
 </p>
 
 How to Lock Down Your SSH Server
